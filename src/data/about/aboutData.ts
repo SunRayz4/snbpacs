@@ -20,6 +20,8 @@ export interface AboutPageData {
     generalPolicyACS?: string;
     sppuCodeOfConduct?: string;
   };
+  /** When true, Directors Message page shows two directors side by side (left: director-message-1, right: director-message-2) */
+  isTwoDirectors?: boolean;
 }
 
 export const aboutData: Record<string, AboutPageData> = {
@@ -171,35 +173,28 @@ Thank You!`,
   },
   "directors-message": {
     title: "Director's Message",
-    description: "Message from Director Ms. Devyani D. Bhosale",
-    content: `I am glad to know that S.N.B.P College of Arts, Commerce, Science and Management Studies is growing towards the successful organization in the education era. The college is giving a platform to the student through the various indoor and outdoor activities so that it has become a forum which could aptly be used an exposure for student's inner qualities and hidden talents. It will definitely help students to build their personality. I convey my good wishes to all faculty members, parents and students for the future.
-
-It gives me great pride and satisfaction to write about SNBPACS, we are passing through a tremendously changing process and our younger generation must be accordingly trained, so that, they can address these challenges effectively, timely and meaningfully.
-
-We, at SNBPACS provide excellent infrastructure, competent faculty, lush green environment for learning and all other facilities required for modern education. The main aim of the SNBPACS is to provide modern education in the field of Arts, Commerce, Science & Computer to the youth.
-
-Thank You!`,
-    image: `http://snbpacsms.com/WebsitePages/assets/images/Director.png`,
-    author: "Ms. Devyani D. Bhosale",
-    position: "Director, S.E. Society",
+    description: "Messages from our Directors",
+    content: "",
+    isTwoDirectors: true,
   },
   "director-message-2": {
     title: "Director's Message",
-    description: "Message from Director Adv (Ms.) Rutuja D. Bhosale",
-    content: `Dear Students and Parents,
+    description: "Message from Director Adv. (Ms.) Rutuja D. Bhosale",
+    content: `S.N.B.P College of Arts, Commerce, Science and Management Studies is growing on all successful directions and will continue the same. The college has been simply unstoppable in its progress as it has been actively involved in various activities that have brought to light the hidden talents of the college students and staff. I wish to staff and students of the college success in their future endeavors.
 
-It gives me immense pleasure to welcome you to S.E. Society's family of institutions. Our vision has always been to create leaders who are not only academically accomplished but also socially responsible and ethically grounded.
+It is great pleasure to observe the creative expression in students who had contributed for the various activities and programs.
 
-At SNBP ACS, we have built an ecosystem that encourages innovation, critical thinking, and collaborative learning. Our programs are designed to meet the evolving needs of the industry while maintaining the highest academic standards.
+We provide state of the art infrastructure and dedicated, devoted and committed faculty. Our vision is to impart world class quality education to the students in various disciplines in our campus.
 
-We believe that every student has unique potential, and our role is to help them discover and nurture that potential. Through mentorship, guidance, and ample opportunities, we aim to transform every student into a confident, capable individual ready to make a mark in the world.
+We have an enviable and eminent global network of faculty members and we continue to ensure that our network becomes bigger and better. The research out-put by faculty and students is also encouraging. Our goal is to be the most preferred choice of the students, faculty & industries & to be in the top in every discipline of arts commerce science & management.
 
-I invite you to be a part of our journey towards excellence!
+We at SNBPACS provide excellent infrastructure competent faculty, lush green environment for learning & all other facilities required for modern education.
 
-Adv (Ms.) Rutuja D. Bhosale
-Director, S.E. Society`,
-    image: `${API_BASE}/images/Director.png`,
-    author: "Adv (Ms.) Rutuja D. Bhosale",
+Wishing you all success and bright future!!!
+
+Thank You!`,
+    image: "http://snbpacsms.com/WebsitePages/assets/images/CampusDirector.png",
+    author: "Adv. (Ms.) Rutuja D. Bhosale",
     position: "Director, S.E. Society",
   },
   vision: {

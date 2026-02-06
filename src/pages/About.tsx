@@ -241,6 +241,7 @@ interface AboutPageData {
     affiliationLetter?: string;
     permissionLetter?: string;
   };
+  isTwoDirectors?: boolean;
 }
 
 const About = () => {
@@ -273,6 +274,34 @@ const About = () => {
   const isMessagePage = !!pageAboutData.author;
   const isCommitteesPage = !!pageAboutData.committeeList;
   const isOrganogramPage = !!pageAboutData.pdf;
+  const isTwoDirectorsPage = pageAboutData.isTwoDirectors === true;
+  const leftDirector = isTwoDirectorsPage ? aboutData["director-message-1"] : null;
+  const rightDirector = isTwoDirectorsPage ? aboutData["director-message-2"] : null;
+
+  const renderMessageBlock = (data: AboutPageData) => (
+    <div className="flex flex-col">
+      <div className="flex flex-col sm:flex-row gap-6 mb-6">
+        {data.image && (
+          <img
+            src={data.image}
+            alt={data.author ?? data.title}
+            className="w-40 h-48 object-cover rounded-lg flex-shrink-0"
+          />
+        )}
+        <div>
+          <h2 className="text-xl font-bold mb-1">{data.author}</h2>
+          <p className="text-primary font-medium">{data.position}</p>
+        </div>
+      </div>
+      <div className="prose max-w-none">
+        {data.content.split("\n\n").map((p, i) => (
+          <p key={i} className="mb-4 whitespace-pre-line">
+            {p}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <Layout>
@@ -287,6 +316,16 @@ const About = () => {
 
       <section className="py-12">
         <div className="container">
+          {isTwoDirectorsPage && leftDirector && rightDirector ? (
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                {renderMessageBlock(leftDirector)}
+              </div>
+              <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
+                {renderMessageBlock(rightDirector)}
+              </div>
+            </div>
+          ) : (
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <div className="bg-card rounded-xl p-6 shadow-soft border border-border">
@@ -444,6 +483,7 @@ const About = () => {
               )}
             </div>
           </div>
+          )}
         </div>
       </section>
     </Layout>
