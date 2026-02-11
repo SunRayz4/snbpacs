@@ -128,7 +128,7 @@ export const teachingStaffData: FacultyMember[] = [
     designation: "Assistant Professor",
     email: "gauri.shirude@gmail.com",
     experience: "12 Years",
-    image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/3_Gauri.jpg",
+    image: "http://snbpacsms.com/WebsitePages/TeachingPhoto/5_Gauri%20Shirude.JPG",
     education: [
       {
         degree: "M.Sc",

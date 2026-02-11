@@ -38,6 +38,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 const AcademicLeader = () => {
+  const pdfUrl = `${import.meta.env.VITE_STATIC_ASSETS}/PDF/administration/AcademicLeader.pdf`;
+
   return (
     <Layout>
       <PageHeader
@@ -52,9 +54,8 @@ const AcademicLeader = () => {
       <section className="py-8">
         <div className="container">
           <div className="bg-card rounded-xl p-6 shadow-soft border border-border text-center">
-
             <a
-              href="http://snbpacsms.com/WebsitePages/assets/PDF/AcademicLeader.pdf"
+              href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               title="Click to open PDF"
@@ -66,7 +67,6 @@ const AcademicLeader = () => {
                 style={{ color: "#dc3545" }} 
               />
             </a>
-
           </div>
         </div>
       </section>
@@ -75,3 +75,4 @@ const AcademicLeader = () => {
 };
 
 export default AcademicLeader;
+

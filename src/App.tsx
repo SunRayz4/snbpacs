@@ -19,7 +19,11 @@ import TeachingStaff from "./pages/human-capital/TeachingStaff";
 import GuestFaculty from "./pages/human-capital/GuestFaculty";
 import FacultyDevelopmentProgram from "./pages/human-capital/FacultyDevelopmentProgram";
 
+import NonTeachingSatff from "./pages/human-capital/NonTeaching";
+
 // Administration Pages
+
+
 import CodeOfConduct from "./pages/administration/CodeOfConduct";
 
 
@@ -59,6 +63,9 @@ const App = () => (
           <Route path="/human-capital/teaching-staff" element={<TeachingStaff />} />
           <Route path="/human-capital/guest-faculty" element={<GuestFaculty />} />
           <Route path="/human-capital/fdp" element={<FacultyDevelopmentProgram />} />
+
+
+           <Route path="/human-capital/non-teaching-staff" element={<NonTeachingSatff />} />
           
           {/* Administration */}
           <Route path="/administration/code-of-conduct" element={<CodeOfConduct />} />
