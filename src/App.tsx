@@ -22,6 +22,9 @@ import FacultyDevelopmentProgram from "./pages/human-capital/FacultyDevelopmentP
 // Administration Pages
 import CodeOfConduct from "./pages/administration/CodeOfConduct";
 
+
+import AcademicLeader from "./pages/administration/AcademicLeader";
+
 // Academics Pages
 import FeeStructure from "./pages/academics/FeeStructure";
 
@@ -59,6 +62,7 @@ const App = () => (
           
           {/* Administration */}
           <Route path="/administration/code-of-conduct" element={<CodeOfConduct />} />
+         <Route path="/administration/academic-leadership" element={<AcademicLeader />} />
           
           {/* Academics - Fee Structure */}
           <Route path="/academics/fee-structure/:program" element={<FeeStructure />} />
